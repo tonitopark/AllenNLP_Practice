@@ -1,0 +1,22 @@
+python -m allennlp.service.server_simple
+    --archive-path tests/model.tar.gz
+    --predictor paper-classifier
+    --include-package my_library
+    --title "Academic Paper Classifier"
+    --field-name title
+    --field-name paperAbstract
+
+
+allennlp predict tests/venue_output/model.tar.gz
+                 tests/s2_papers.json
+                 --include-package my_library
+                 --predictor paper-classifier
+
+
+allennlp train tests/06_b_paper_classifier.json \
+               -s tests/venue_output \
+               --include-package my_library
+
+
+allennlp train tests/constituency_parser.jsonnet \
+               -s tests/const_parse
