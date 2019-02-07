@@ -4,7 +4,7 @@ import sys
 
 from allennlp.commands import main
 
-config_file = '06_b_paper_classifier.json'
+config_file = '06b_Paper_classifier.json'
 
 overrides = json.dumps({"trainer":{"cuda_device":0}})
 
