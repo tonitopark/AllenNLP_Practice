@@ -1,12 +1,3 @@
-python -m allennlp.service.server_simple
-    --archive-path tests/model.tar.gz
-    --predictor paper-classifier
-    --include-package my_library
-    --title "Academic Paper Classifier"
-    --field-name title
-    --field-name paperAbstract
-
-
 allennlp predict tests/venue_output/model.tar.gz
                  tests/s2_papers.json
                  --include-package my_library
