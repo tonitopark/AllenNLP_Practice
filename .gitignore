@@ -1,4 +1,4 @@
 .idea/
 tests/venue_output
 tests/.ipynb_checkpoints
-.hdf5
+*.hdf5
